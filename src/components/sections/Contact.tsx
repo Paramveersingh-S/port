@@ -1,9 +1,40 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Send, Mail, Linkedin, Github, MessageSquare } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Send, Mail, Linkedin, Github, MessageSquare, CheckCircle2, AlertCircle } from "lucide-react";
 
 export default function Contact() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xvgzpyzo", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Background Decorative Gradient */}
@@ -60,11 +91,13 @@ export default function Contact() {
                 <MessageSquare className="w-24 h-24" />
              </div>
 
-             <form className="space-y-6 relative z-10">
+             <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                    <div className="space-y-2">
                       <label className="text-[10px] text-foreground/40 uppercase tracking-widest font-bold ml-1">Identity</label>
                       <input 
+                        required
+                        name="name"
                         type="text" 
                         placeholder="Name" 
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary/50 transition-all"
@@ -73,6 +106,8 @@ export default function Contact() {
                    <div className="space-y-2">
                       <label className="text-[10px] text-foreground/40 uppercase tracking-widest font-bold ml-1">Comm Channel</label>
                       <input 
+                        required
+                        name="email"
                         type="email" 
                         placeholder="Email" 
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary/50 transition-all"
@@ -82,6 +117,8 @@ export default function Contact() {
                 <div className="space-y-2">
                    <label className="text-[10px] text-foreground/40 uppercase tracking-widest font-bold ml-1">Transmission Data</label>
                    <textarea 
+                     required
+                     name="message"
                      rows={5}
                      placeholder="How can I help you?" 
                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary/50 transition-all resize-none"
@@ -89,11 +126,35 @@ export default function Contact() {
                 </div>
                 
                 <button 
+                  disabled={status === "loading" || status === "success"}
                   type="submit"
-                  className="w-full py-4 bg-primary text-background font-bold rounded-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(0,242,255,0.3)]"
+                  className="w-full py-4 bg-primary text-background font-bold rounded-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(0,242,255,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Transmission <Send className="w-4 h-4" />
+                  {status === "loading" ? "Syncing..." : status === "success" ? "Sent" : "Send Transmission"} 
+                  {status === "idle" && <Send className="w-4 h-4" />}
+                  {status === "success" && <CheckCircle2 className="w-4 h-4" />}
                 </button>
+
+                <AnimatePresence>
+                  {status === "success" && (
+                    <motion.p 
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="text-xs text-secondary text-center font-bold tracking-wider"
+                    >
+                      SUCCESS: TRANSMISSION RECEIVED.
+                    </motion.p>
+                  )}
+                  {status === "error" && (
+                    <motion.p 
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="text-xs text-red-500 text-center font-bold tracking-wider flex items-center justify-center gap-1"
+                    >
+                      <AlertCircle className="w-3 h-3" /> ERROR: UPLINK FAILED. TRY AGAIN.
+                    </motion.p>
+                  )}
+                </AnimatePresence>
              </form>
           </motion.div>
         </div>
