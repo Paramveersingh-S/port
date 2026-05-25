@@ -95,22 +95,30 @@ export default function Projects() {
                    "from-accent-blue/20 to-transparent"
                  )} />
                  
-                 {/* Visual Placeholder */}
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-32 h-32 rounded-full border border-white/5 flex items-center justify-center animate-pulse">
-                       {project.icon}
+                 {/* Visual Centerpiece: Logo + Tech Overlay */}
+                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
+                    <motion.div 
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="relative w-32 h-32 rounded-3xl overflow-hidden border-2 border-white/10 shadow-2xl z-10"
+                    >
+                       <img 
+                         src="https://avatars.githubusercontent.com/u/155875516?v=4" 
+                         alt="Paramveer Singh" 
+                         className="w-full h-full object-cover"
+                       />
+                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    </motion.div>
+
+                    <div className="flex flex-wrap justify-center gap-2 px-12 z-10">
+                       {project.tech.map((t, i) => (
+                         <span key={i} className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] bg-white/5 backdrop-blur-xl border border-white/10 text-white/90 rounded-lg shadow-lg">
+                           {t}
+                         </span>
+                       ))}
                     </div>
+
                     {/* Futuristic Grid Overlay */}
                     <div className="absolute inset-0 opacity-10 bg-grid" />
-                 </div>
-                 
-                 {/* Tech Badges on Image */}
-                 <div className="absolute bottom-6 left-6 flex flex-wrap gap-2">
-                    {project.tech.map((t, i) => (
-                      <span key={i} className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-black/60 backdrop-blur-md border border-white/10 text-white/70 rounded">
-                        {t}
-                      </span>
-                    ))}
                  </div>
               </div>
 
