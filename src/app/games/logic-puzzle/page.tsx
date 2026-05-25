@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cpu, Zap, RotateCcw, ChevronLeft, CheckCircle2, AlertTriangle } from "lucide-react";
+import { Cpu, Zap, ChevronLeft, CheckCircle2, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 
 type GateType = "AND" | "OR" | "XOR";

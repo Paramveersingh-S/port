@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Layers, ShieldCheck, Cpu, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const projects = [
   {
@@ -101,10 +102,12 @@ export default function Projects() {
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       className="relative w-32 h-32 rounded-3xl overflow-hidden border-2 border-white/10 shadow-2xl z-10"
                     >
-                       <img 
+                       <Image 
                          src="https://avatars.githubusercontent.com/u/155875516?v=4" 
                          alt="Paramveer Singh" 
-                         className="w-full h-full object-cover"
+                         fill
+                         className="object-cover"
+                         unoptimized
                        />
                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     </motion.div>
@@ -134,10 +137,13 @@ export default function Projects() {
                       {project.category}
                     </div>
                     <div className="flex items-center gap-3 mb-2">
-                       <img 
+                       <Image 
                          src="https://avatars.githubusercontent.com/u/155875516?v=4" 
                          alt="Paramveer Singh" 
-                         className="w-8 h-8 rounded-full border border-primary/20"
+                         width={32}
+                         height={32}
+                         className="rounded-full border border-primary/20"
+                         unoptimized
                        />
                        <h4 className="text-3xl font-bold font-space-grotesk tracking-tight group-hover:text-primary transition-colors">
                          {project.title}
