@@ -20,10 +20,10 @@ export default function Footer() {
             &copy; 2024 Paramveer Singh // Engineering the Future
           </div>
 
-          <div className="flex gap-6">
-            <a href="#" className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-primary transition-colors">LinkedIn</a>
-            <a href="#" className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-primary transition-colors">GitHub</a>
-            <a href="#" className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-primary transition-colors">Resume</a>
+          <div className="flex gap-6 relative z-20">
+            <a href="https://www.linkedin.com/in/paramveer-singh-454b54270/" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-primary transition-colors">LinkedIn</a>
+            <a href="https://github.com/Paramveersingh-S" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-primary transition-colors">GitHub</a>
+            <a href="https://drive.google.com/file/d/1bC_DUoLLr20DvtYL84l1UM_GeO5nxesa/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-primary transition-colors">Resume</a>
           </div>
         </div>
       </div>

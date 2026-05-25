@@ -29,21 +29,21 @@ export default function Contact() {
             </p>
 
             <div className="space-y-6">
-               <a href="mailto:contact@paramveer.sys" className="flex items-center gap-4 group cursor-pointer">
+               <a href="mailto:lco23586@ccet.ac.in" className="flex items-center gap-4 group cursor-pointer">
                   <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/50 transition-all">
                      <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                      <div className="text-[10px] text-foreground/40 uppercase tracking-widest font-bold">Secure Email</div>
-                     <div className="text-lg font-bold">contact@paramveer.sys</div>
+                     <div className="text-lg font-bold">lco23586@ccet.ac.in</div>
                   </div>
                </a>
                
-               <div className="flex gap-4 pt-4">
-                  <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all">
+               <div className="flex gap-4 pt-4 relative z-20">
+                  <a href="https://www.linkedin.com/in/paramveer-singh-454b54270/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all">
                      <Linkedin className="w-6 h-6 text-foreground/60" />
                   </a>
-                  <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all">
+                  <a href="https://github.com/Paramveersingh-S" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all">
                      <Github className="w-6 h-6 text-foreground/60" />
                   </a>
                </div>

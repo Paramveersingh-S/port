@@ -73,13 +73,13 @@ export default function About() {
         >
           <div className="space-y-6">
             <p className="text-lg text-foreground/70 leading-relaxed">
-              As an Electronics & Communication Engineering student, I am driven by the complexity of 
-              interconnected systems. My focus lies at the intersection of <span className="text-white font-medium">embedded firmware</span>, 
-              <span className="text-white font-medium">real-time processing</span>, and <span className="text-white font-medium">autonomous intelligence</span>.
+              BE student in <span className="text-white font-medium">Electronics & Communication</span> at CCET (Panjab University). 
+              I specialize in integrating hardware architectures with <span className="text-white font-medium">Deep Learning</span>. 
+              Proud alumnus of <span className="text-white font-medium">CSIO-CSIR</span> with a background in precision mechanical engineering.
             </p>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              Whether it&apos;s securing automotive CAN buses or developing chaos-based random number generators, 
-              my mission is to build systems that are not just functional, but inherently secure and intelligent.
+              Recognized as a <span className="text-primary font-bold italic">NASA Global Nominee</span> (Team Zora) and certified in 
+              Quantum Cryptography and Remote Sensing. My work focuses on building secure, predictive, and high-entropy systems for the next decade of engineering.
             </p>
             
             <div className="flex gap-4 pt-4">

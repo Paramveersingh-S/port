@@ -20,7 +20,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            System Online: Version 2.0.24
+            NASA Global Nominee // Mission Active
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold font-space-grotesk tracking-tighter leading-none mb-6">
@@ -29,25 +29,33 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/60 max-w-xl mb-10 leading-relaxed">
-            Electronics & Communication Engineer. Specialized in 
-            <span className="text-foreground font-medium"> Embedded Systems</span>, 
-            <span className="text-foreground font-medium"> AI/ML</span>, and 
-            <span className="text-foreground font-medium"> Secure Automotive Intelligence</span>.
+            BE Electronics & Communication Engineering @ CCET Chandigarh. 
+            Passionate about <span className="text-foreground font-medium">Deep Learning</span>, 
+            <span className="text-foreground font-medium">Quantum Security</span>, and 
+            <span className="text-foreground font-medium">Space Intelligence</span>.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-12">
-            <button className="px-8 py-4 bg-primary text-background font-bold rounded-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(0,242,255,0.4)]">
+          <div className="flex flex-wrap gap-4 mb-12 relative z-20">
+            <a 
+              href="#projects"
+              className="px-8 py-4 bg-primary text-background font-bold rounded-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(0,242,255,0.4)]"
+            >
               View Mission Logs <ChevronRight className="w-5 h-5" />
-            </button>
-            <button className="px-8 py-4 border border-white/10 hover:bg-white/5 font-bold rounded-lg transition-all flex items-center gap-2">
+            </a>
+            <a 
+              href="https://drive.google.com/file/d/1bC_DUoLLr20DvtYL84l1UM_GeO5nxesa/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-4 border border-white/10 hover:bg-white/5 font-bold rounded-lg transition-all flex items-center gap-2"
+            >
               Download Decrypted CV
-            </button>
+            </a>
           </div>
 
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-foreground/40 hover:text-primary transition-colors"><Github className="w-6 h-6" /></a>
-            <a href="#" className="text-foreground/40 hover:text-primary transition-colors"><Linkedin className="w-6 h-6" /></a>
-            <a href="#" className="text-foreground/40 hover:text-primary transition-colors"><Mail className="w-6 h-6" /></a>
+          <div className="flex items-center gap-6 relative z-20">
+            <a href="https://github.com/Paramveersingh-S" target="_blank" rel="noopener noreferrer" className="text-foreground/40 hover:text-primary transition-colors"><Github className="w-6 h-6" /></a>
+            <a href="https://www.linkedin.com/in/paramveer-singh-454b54270/" target="_blank" rel="noopener noreferrer" className="text-foreground/40 hover:text-primary transition-colors"><Linkedin className="w-6 h-6" /></a>
+            <a href="mailto:lco23586@ccet.ac.in" className="text-foreground/40 hover:text-primary transition-colors"><Mail className="w-6 h-6" /></a>
           </div>
         </motion.div>
 

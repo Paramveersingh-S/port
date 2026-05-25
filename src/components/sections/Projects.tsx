@@ -1,39 +1,50 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Layers, ShieldCheck, Cpu } from "lucide-react";
+import { ExternalLink, Github, Layers, ShieldCheck, Cpu, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const projects = [
   {
-    title: "CHRONOS",
-    subtitle: "Chaos-Based True Random Number Generator",
-    category: "Embedded Security",
-    description: "A high-entropy hardware-based random number generator leveraging chaotic oscillators for cryptographic applications.",
-    tech: ["FPGA", "Verilog", "Chaos Theory", "Embedded C"],
-    icon: <Cpu className="w-5 h-5" />,
-    color: "primary",
-    image: "/project-1.jpg", // Placeholder
-  },
-  {
-    title: "CAN-IDS",
-    subtitle: "Intrusion Detection for Automotive Systems",
-    category: "Cybersecurity",
-    description: "Deep learning based system for detecting message injection and denial-of-service attacks on automotive CAN networks.",
-    tech: ["Python", "TensorFlow", "CAN Bus", "Linux"],
-    icon: <ShieldCheck className="w-5 h-5" />,
-    color: "secondary",
-    image: "/project-2.jpg", // Placeholder
-  },
-  {
-    title: "VedicText",
-    subtitle: "Sanskrit NLP Pipeline",
-    category: "AI / Machine Learning",
-    description: "Advanced machine learning pipeline for digitizing and translating ancient Sanskrit texts using OCR and neural machine translation.",
-    tech: ["Python", "PyTorch", "NLP", "React"],
+    title: "Satellite Vulnerability Mapper",
+    subtitle: "Real-time Space Weather Assessment",
+    category: "Space Tech / AI",
+    description: "A mission-critical predictive dashboard integrating NASA/NOAA data to forecast geomagnetic threats to orbital assets with sub-second risk calculations.",
+    tech: ["JavaScript", "CesiumJS", "NASA APIs"],
     icon: <Layers className="w-5 h-5" />,
     color: "accent-blue",
-    image: "/project-3.jpg", // Placeholder
+    github: "https://github.com/Paramveersingh-S/Satellite-Vulnerability-Mapper",
+  },
+  {
+    title: "CHRONOS (Research)",
+    subtitle: "IEEE Xplore Published Architecture",
+    category: "Cybersecurity / Research",
+    description: "Novel chaos-driven TRNG architecture for secure neural weight initialization and cryptographic key synthesis. Peer-reviewed and published in IEEE.",
+    tech: ["Chaos Theory", "Neural Networks", "Cryptography"],
+    icon: <ShieldCheck className="w-5 h-5" />,
+    color: "primary",
+    link: "https://ieeexplore.ieee.org/document/11448529",
+    github: "https://github.com/Paramveersingh-S/Chua-s-circuit-simulation",
+  },
+  {
+    title: "Secure Arduino Bootloader",
+    subtitle: "Low-Level Firmware Security",
+    category: "Embedded Systems",
+    description: "A custom-engineered secure bootloader for AVR architectures, focusing on memory protection and integrity verification during firmware updates.",
+    tech: ["C++", "AVR", "Embedded Systems"],
+    icon: <Cpu className="w-5 h-5" />,
+    color: "secondary",
+    github: "https://github.com/Paramveersingh-S/bootloader-for-arduino",
+  },
+  {
+    title: "IoT Air Quality Monitor",
+    subtitle: "Smart Environmental Sensing",
+    category: "IoT / Embedded",
+    description: "Distributed sensing system using MQ-2 sensors and NodeMCU to monitor and broadcast real-time atmospheric safety metrics over custom web interfaces.",
+    tech: ["C++", "NodeMCU", "ESP8266", "IoT"],
+    icon: <Zap className="w-5 h-5" />,
+    color: "accent-purple",
+    github: "https://github.com/Paramveersingh-S/IoT-based-Air-Quality-Safety-Monitoring-System",
   },
 ];
 
@@ -125,12 +136,26 @@ export default function Projects() {
                  </p>
 
                  <div className="flex gap-4 pt-4">
-                    <button className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-lg text-sm font-bold hover:bg-white/5 transition-all">
-                       <Github className="w-4 h-4" /> Codebase
-                    </button>
-                    <button className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-lg text-sm font-bold hover:bg-white/5 transition-all">
-                       <ExternalLink className="w-4 h-4" /> Live System
-                    </button>
+                    {project.github && (
+                      <a 
+                        href={project.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-lg text-sm font-bold hover:bg-white/5 transition-all"
+                      >
+                         <Github className="w-4 h-4 text-primary" /> Repository
+                      </a>
+                    )}
+                    {project.link && (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-lg text-sm font-bold hover:bg-white/5 transition-all"
+                      >
+                         <ExternalLink className="w-4 h-4" /> IEEE Xplore
+                      </a>
+                    )}
                  </div>
               </div>
 

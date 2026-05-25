@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import { Terminal as TerminalIcon } from "lucide-react";
 
 const COMMANDS = {
-  help: "Available commands: whoami, skills, projects, experience, contact, clear",
-  whoami: "Paramveer Singh - ECE Engineer | Embedded Systems | AI Enthusiast",
-  skills: "Embedded C, Python, C++, Verilog, FPGA, RTOS, CAN Bus, PyTorch, PCB Design",
-  projects: "CHRONOS (Chaos-TRNG), CAN-IDS (Automotive Security), VedicText (NLP Pipeline)",
-  experience: "Internships at CSIR-CSIO and Yamada Automation",
-  contact: "Email: contact@paramveer.sys | LinkedIn: linkedin.com/in/paramveer-singh",
+  help: "Available commands: whoami, skills, projects, experience, research, contact, clear",
+  whoami: "Paramveer Singh - NASA Global Nominee | ECE @ CCET Chandigarh | Integrating Electronics & Deep Learning",
+  skills: "Electronics Design, Deep Learning, Quantum Security, Remote Sensing, Next.js, CNC Programming",
+  projects: "Satellite Vulnerability Mapper (NASA API), CHRONOS (TRNG Research), Chua's Oscillator Simulation",
+  experience: "Summer Intern at CSIR-CSIO, Manufacturing Trainee at Yamada Automation",
+  research: "Unified Chaos-Driven TRNG (ICSPED 2026), Satellite Vulnerability Prediction (Technical Report)",
+  contact: "Email: lco23586@ccet.ac.in | LinkedIn: linkedin.com/in/paramveer-singh",
 };
 
 export default function Terminal() {

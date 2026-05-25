@@ -5,23 +5,23 @@ import { cn } from "@/lib/utils";
 
 const skillCategories = [
   {
-    title: "Core Languages",
-    skills: ["C", "C++", "Python", "Verilog", "Embedded C"],
+    title: "Engineering Core",
+    skills: ["Electronics & Communication", "Analog Circuit Design", "PCB Design", "Digital Systems"],
     color: "primary",
   },
   {
-    title: "Embedded Systems",
-    skills: ["FPGA", "RTOS", "Microcontrollers", "PCB Design", "ARM"],
-    color: "secondary",
-  },
-  {
-    title: "AI & Data",
-    skills: ["PyTorch", "TensorFlow", "OpenCV", "NLP", "NumPy"],
+    title: "Programming & AI",
+    skills: ["Python", "C++", "JavaScript", "TypeScript", "Deep Learning", "TensorFlow", "Next.js"],
     color: "accent-blue",
   },
   {
-    title: "Tools & Protocols",
-    skills: ["CAN Bus", "Git", "Linux", "MATLAB", "KiCad"],
+    title: "Advanced Tech",
+    skills: ["Quantum Cryptography", "Remote Sensing", "Space Weather Prediction", "CesiumJS"],
+    color: "secondary",
+  },
+  {
+    title: "Industrial & Tools",
+    skills: ["CNC/VMC Programming", "AutoCAD", "Linux Kernel", "Git", "MATLAB"],
     color: "accent-purple",
   },
 ];

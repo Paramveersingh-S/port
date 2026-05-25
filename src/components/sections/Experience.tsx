@@ -6,24 +6,25 @@ import { Calendar, MapPin } from "lucide-react";
 const experiences = [
   {
     company: "CSIR — Central Scientific Instruments Organisation",
-    role: "Software Intern",
-    period: "May 2024 — July 2024",
+    role: "Summer Intern",
+    period: "June 2025 — July 2025",
     location: "Chandigarh, India",
     description: [
-      "Developed high-performance software modules for precision instrumentation.",
-      "Optimized data acquisition pipelines for real-time sensor monitoring.",
-      "Collaborated with senior scientists to implement signal processing algorithms.",
+      "Collaborated on the ISTC Seat Allocation Portal for diploma program admissions.",
+      "Architected backend logic and real-time database operations using Next.js and TypeScript.",
+      "Implemented a custom algorithm inspired by MRDA for fair candidate placement.",
+      "Designed a clean, responsive web interface using React and Tailwind CSS.",
     ],
   },
   {
     company: "Yamada Automation",
     role: "Manufacturing Intern",
-    period: "June 2023 — August 2023",
+    period: "August 2022 — September 2022",
     location: "Manesar, India",
     description: [
-      "Gained hands-on experience in industrial automation and PLC programming.",
-      "Assisted in the maintenance and optimization of manufacturing line controllers.",
-      "Analyzed system logs to identify and resolve hardware-software interface issues.",
+      "Specialized in AutoCAD mechanical design and CNC/VMC programming.",
+      "Optimized tool and die manufacturing processes through precision automation.",
+      "Analyzed industrial system logs to resolve critical hardware-software interface bottlenecks.",
     ],
   },
 ];
