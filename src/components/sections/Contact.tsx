@@ -15,21 +15,28 @@ export default function Contact() {
     const data = Object.fromEntries(formData);
 
     try {
-      const response = await fetch("https://formspree.io/f/xvgzpyzo", {
+      // NOTE: Replace 'YOUR_ACCESS_KEY_HERE' with the key from web3forms.com
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          access_key: "YOUR_ACCESS_KEY_HERE", // GET YOUR KEY AT WEB3FORMS.COM
+          subject: "New Portfolio Transmission",
+          from_name: "Paramveer's Portfolio"
+        }),
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         }
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         setStatus("success");
         (e.target as HTMLFormElement).reset();
       } else {
-        const result = await response.json();
-        console.error("Formspree error:", result);
+        console.error("Web3Forms error:", result);
         setStatus("error");
       }
     } catch (error) {
