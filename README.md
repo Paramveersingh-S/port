@@ -45,5 +45,4 @@ The easiest way to deploy this project is via [Vercel](https://vercel.com/):
 3. Vercel will automatically detect Next.js and deploy.
 4. No additional environment variables are required for the base build.
 
----
-Built with precision by Gemini CLI.
+
