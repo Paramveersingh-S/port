@@ -125,9 +125,16 @@ export default function Projects() {
                     )}>
                       {project.category}
                     </div>
-                    <h4 className="text-3xl font-bold font-space-grotesk tracking-tight group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h4>
+                    <div className="flex items-center gap-3 mb-2">
+                       <img 
+                         src="https://avatars.githubusercontent.com/u/155875516?v=4" 
+                         alt="Paramveer Singh" 
+                         className="w-8 h-8 rounded-full border border-primary/20"
+                       />
+                       <h4 className="text-3xl font-bold font-space-grotesk tracking-tight group-hover:text-primary transition-colors">
+                         {project.title}
+                       </h4>
+                    </div>
                     <p className="text-foreground/40 text-sm mt-1">{project.subtitle}</p>
                  </div>
 

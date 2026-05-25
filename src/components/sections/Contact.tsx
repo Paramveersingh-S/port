@@ -19,8 +19,8 @@ export default function Contact() {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         }
       });
 
@@ -28,9 +28,12 @@ export default function Contact() {
         setStatus("success");
         (e.target as HTMLFormElement).reset();
       } else {
+        const result = await response.json();
+        console.error("Formspree error:", result);
         setStatus("error");
       }
-    } catch {
+    } catch (error) {
+      console.error("Submission error:", error);
       setStatus("error");
     }
   }
