@@ -20,7 +20,7 @@ export default function Contact() {
         method: "POST",
         body: JSON.stringify({
           ...data,
-          access_key: "YOUR_ACCESS_KEY_HERE", // GET YOUR KEY AT WEB3FORMS.COM
+          access_key: "c336cffd-c955-4979-825a-5cc4193f2fef", 
           subject: "New Portfolio Transmission",
           from_name: "Paramveer's Portfolio"
         }),
